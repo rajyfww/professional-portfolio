@@ -57,11 +57,11 @@ navLinks.forEach(link => {
 // Typewriter effect for hero title
 const typewriterText = document.getElementById('typewriter');
 const texts = [
-    'Full Stack Developer',
-    'Crypto Trading Expert',
+    'MERN Stack Developer',
     'Python Specialist',
-    'MERN Developer',
-    '.NET Engineer'
+    'React Developer',
+    'Node.js Engineer',
+    'Trading Bot Creator'
 ];
 
 let textIndex = 0;
@@ -353,3 +353,36 @@ document.addEventListener('mouseup', () => {
 if (window.innerWidth <= 768) {
     cursor.style.display = 'none';
 }
+
+// Project card hover effects
+document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        card.style.transform = 'translateY(-10px) scale(1.02)';
+    });
+    
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = 'translateY(0) scale(1)';
+    });
+});
+
+// Skill card interactive effects
+document.querySelectorAll('.skill-card').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        const icon = card.querySelector('.skill-icon');
+        if (icon) {
+            icon.style.transform = 'scale(1.1) rotateY(180deg)';
+        }
+    });
+    
+    card.addEventListener('mouseleave', () => {
+        const icon = card.querySelector('.skill-icon');
+        if (icon) {
+            icon.style.transform = 'scale(1) rotateY(0deg)';
+        }
+    });
+});
+
+// Add smooth transitions to skill icons
+document.querySelectorAll('.skill-icon').forEach(icon => {
+    icon.style.transition = 'transform 0.3s ease';
+});
