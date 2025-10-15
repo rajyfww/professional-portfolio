@@ -64,10 +64,10 @@ const Hero = () => {
               repeat: Infinity,
               delay: Math.random() * 2
             }}
-            style={
+            style={{
               left: `${Math.random() * 100}%`,
               top: '100%'
-            }
+            }}
           />
         ))}
       </div>
